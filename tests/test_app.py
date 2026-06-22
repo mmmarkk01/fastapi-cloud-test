@@ -8,14 +8,16 @@ client = TestClient(app)
 def test_api_hello_returns_message():
     resp = client.get("/api/hello")
     assert resp.status_code == 200
-    assert resp.json() == {"message": "Hello from FastAPI 0.138 · app.frontend 🎉"}
+    assert resp.json() == {
+        "message": "Hello from FastAPI + Next.js (static export) 🚀"
+    }
 
 
-def test_root_serves_frontend_html():
+def test_root_serves_nextjs_export():
     resp = client.get("/")
     assert resp.status_code == 200
     assert "text/html" in resp.headers["content-type"]
-    assert "FastAPI Cloud" in resp.text
+    assert "FastAPI + Next.js static export" in resp.text
 
 
 def test_api_route_takes_precedence_over_frontend():
