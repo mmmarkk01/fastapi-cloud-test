@@ -1,4 +1,0 @@
-# Re-include the Next.js static build that frontend/.gitignore drops.
-# fastapi deploy honors gitignore; this override ships the build (not node_modules/.next).
-!frontend/out/
-!frontend/out/**
