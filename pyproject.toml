@@ -1,0 +1,16 @@
+[project]
+name = "fastapi-cloud-test"
+version = "0.1.0"
+description = "Minimal FastAPI app using app.frontend(), deployed on FastAPI Cloud"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.138.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
