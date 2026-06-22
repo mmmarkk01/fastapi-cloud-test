@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ — intentionally committed so the static build ships without a Node build step
 
 # production
 /build
